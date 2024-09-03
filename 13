@@ -1,0 +1,97 @@
+# print(bin(112)[2:].zfill(8))
+# print(bin(154)[2:].zfill(8))
+# print(bin(133)[2:].zfill(8))
+# print(bin(208)[2:].zfill(8))
+
+# print(int('10111010000', 2))
+
+# x1 = bin(164)[2:].zfill(8)
+# x2 = bin(90)[2:].zfill(8)
+# x3 = bin(160)[2:].zfill(8)
+# x4 = bin(0)[2:].zfill(8)
+# print(x1+'.' + x2 + '.' + x3 +'.' + x4)
+
+# x5 = bin(255)[2:].zfill(8)
+# x6 = bin(255)[2:].zfill(8)
+# x7 = bin(224)[2:].zfill(8)
+# x8 = bin(0)[2:].zfill(8)
+# print(x5+'.' + x6 + '.' + x7 +'.' + x8)
+
+# print(int('10100000', 2))
+
+c = 0
+for q1 in '01':
+  for w2 in '01':
+    for e3 in '01':
+      for r4 in '01':
+        for t5 in '01':
+          for x6 in '01':
+            for v7 in '01':
+              for y8 in '01':
+                for o9 in '01':
+                  for j10 in '01':
+                    for p11 in '01':
+                      for a12 in '01':
+                        for s13 in '01':
+                            f = q1 + w2 + e3 + r4 + t5+x6+v7+y8+o9+j10+p11+a12+s13
+                            if (f.count('1') + 9) % 4 == 0:
+                              c += 1
+                              print(c)
+
+
+
+# print(bin(112)[2:].zfill(8))
+# print(bin(154)[2:].zfill(8))
+# print(bin(133)[2:].zfill(8))
+# print(bin(208)[2:].zfill(8))
+
+# print(int('10111010000', 2))
+
+x1 = bin(172)[2:].zfill(8)
+x2 = bin(16)[2:].zfill(8)
+x3 = bin(32)[2:].zfill(8)
+x4 = bin(0)[2:].zfill(8)
+print(x1+'.' + x2 + '.' + x3 +'.' + x4)
+
+x5 = bin(255)[2:].zfill(8)
+x6 = bin(255)[2:].zfill(8)
+x7 = bin(240)[2:].zfill(8)
+x8 = bin(0)[2:].zfill(8)
+print(x5+'.' + x6 + '.' + x7 +'.' + x8)
+
+
+
+c = 0
+for q1 in '01':
+  for w2 in '01':
+    for e3 in '01':
+      for r4 in '01':
+        for t5 in '01':
+          for x6 in '01':
+            for v7 in '01':
+              for y8 in '01':
+                for o9 in '01':
+                  for j10 in '01':
+                    for p11 in '01':
+                      for a12 in '01':
+                          f = q1 + w2 + e3 + r4 + t5+x6+v7+y8+o9+j10+p11+a12
+                          if (f.count('1') + 6) % 5 == 0:
+                            c += 1
+                            print(c)
+
+def count_ones_in_binary(n):
+  return bin(n).count('1')
+
+def is_multiple_of_5(n):
+  return n % 5 == 0
+
+start_ip = (172 * 2**24) + (16 * 2** 16) + (32 *2** 8)
+num_addresses = 2 ** 12
+
+count = 0
+for i in range(num_addresses):
+  ip = start_ip + i
+  if is_multiple_of_5(count_ones_in_binary(ip)):
+      count += 1
+
+print(count)
