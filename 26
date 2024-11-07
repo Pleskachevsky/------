@@ -16,7 +16,6 @@
 
 
 #3
-
 c = 1 
 minn = 10000000000
 f = [int(x) for x in open('fw/2611.txt')]

@@ -71,3 +71,20 @@ for j in range(0, len(s) - 1):
         maxi.append(s[j] + s[j+1])
 
 print(c, max(maxi))
+
+f = open('fw/17.txt').readlines()
+s = list(int(i) for i in f)
+
+c = 0 
+mas = []
+mas11 = [int(s[j]) for j in range(len(s)) if s[j] % 11 == 0]
+for l in range(0, len(s) - 2):
+
+    if (((s[l] % 100 == 11) + (s[l + 1] % 100 == 11) + (s[l + 2] % 100 == 11)) >= 1)\
+    and (((s[l] + s[l+1] + s[l+2]) / 3) > (sum(mas11) / len(mas11))):
+        c += 1
+        mas.append(s[l] + s[l+1] + s[l+2])
+print(c, max(mas))
+
+
+
