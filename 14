@@ -278,3 +278,14 @@ while x > 0:
     x //= 31
 
 print(c)
+
+minn = []
+for x in range(1, 2031):
+    z = 6**260+6**160+6**60-x
+    b = ''
+    while z > 0:
+        b = str(z % 6) + b
+        z //= 6
+    if b.count('0') == 202:
+        print(x)
+        break
